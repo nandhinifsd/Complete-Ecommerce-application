@@ -38,7 +38,8 @@ app.use(express.json());
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://stamporacrm.netlify.app"
+        "https://stamporacrm.netlify.app",
+        "https://stamporaecommapp.netlify.app"
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
