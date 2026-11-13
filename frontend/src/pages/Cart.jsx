@@ -85,6 +85,9 @@ const updateQuantity = async (itemId, quantity) => {
         );
 
         setCartItems(response.data.cart.items);
+        //Refresh cart
+        fetchCart();
+
 
     } catch (err) {
         console.log("Quantity Update Error:", err);
@@ -122,6 +125,8 @@ const updateCustomization = async (itemId) => {
         setNewDesign(null);
 
         setMessage("Customization Updated Successfully");
+         //Refresh cart
+        fetchCart();
 
     } catch (err) {
         console.log("Customization Update Error:", err);
