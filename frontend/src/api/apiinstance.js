@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "http://localhost:6500"
+    baseURL: "https://complete-ecommerce-application.vercel.app"
 })
 export default api;

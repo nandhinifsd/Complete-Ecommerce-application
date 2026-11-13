@@ -33,10 +33,10 @@ const OrderDetails = () => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const imageURl="http://localhost:6500/";
+  const imageURl="https://complete-ecommerce-application.vercel.app/";
 
   // Convert relative image paths into complete URLs
-  const getImageUrl = (imagePath) => {
+  /*const getImageUrl = (imagePath) => {
     if (!imagePath) return "";
 
     if (imagePath.startsWith("http")) {
@@ -45,7 +45,7 @@ const OrderDetails = () => {
 
     return `${imageURl}${imagePath.replace(/^\/+/, "")}`;
   };
-
+*/
   // Get order details
   async function getOrderDetails() {
     try {
@@ -311,7 +311,7 @@ const OrderDetails = () => {
                         <td className="p-4">
                           <div className="flex flex-col items-center justify-center">
                             <img
-                              src={getImageUrl(item.designImage)}
+                              src={item.designImage}
                               alt="Design"
                               className="h-20 w-20 object-contain"
                             />

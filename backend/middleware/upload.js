@@ -1,4 +1,4 @@
-const multer = require("multer");
+/*const multer = require("multer");
 const path = require("path");
 
 // Configure storage
@@ -17,6 +17,27 @@ const storage = multer.diskStorage({
             path.extname(file.originalname);
 
         cb(null, uniqueName);
+    }
+});
+
+// Create multer upload middleware
+const upload = multer({
+    storage: storage
+});
+
+module.exports = upload;*/
+
+
+const multer = require("multer");
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const cloudinary = require("../config/cloudinary");
+
+// Configure Cloudinary storage
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: "stampora",
+        allowed_formats: ["jpg", "jpeg", "png", "webp"]
     }
 });
 
