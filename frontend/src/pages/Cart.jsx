@@ -213,7 +213,7 @@ const updateCustomization = async (itemId) => {
                         <div className="flex flex-col items-center gap-3">
 
                             <img
-                                src={`http://localhost:6500/${item.designImage.replace(/\\/g, "/")}`}
+                                src={item.designImage}
                                 alt="Customer Design"
                                 className="w-24 h-24 object-contain border rounded-lg"
                             />
